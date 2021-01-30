@@ -35,7 +35,8 @@ paste = "1.0.1"
 bare-metal = "1.0.0"
 sdio-host = { version = "0.4", optional = true }
 stm32-fmc = { version = "0.2", optional = true }
-synopsys-usb-otg = { version = "^0.2.2", features = ["cortex-m"], optional = true }
+#synopsys-usb-otg = { version = "^0.2.2", features = ["cortex-m"], optional = true }
+synopsys-usb-otg = { features = ["cortex-m"], optional = true, path = "../synopsys-usb-otg.git" }
 
 [dependencies.smoltcp]
 version = "0.7.0"
@@ -60,7 +61,8 @@ cortex-m-log = { version = "~0.6", features = ["itm", "semihosting", "log-integr
 panic-itm = { version = "~0.4.1" }
 panic-semihosting = { version = "0.5.3" }
 cortex-m-semihosting = { version = "0.3.5" }
-usb-device = "0.2.5"
+#usb-device = "0.2.5"
+usb-device = { path = "../usb-device.git" }
 usbd-serial = "0.1.0"
 
 [dev-dependencies.smoltcp]
